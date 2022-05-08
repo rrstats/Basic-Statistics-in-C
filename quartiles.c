@@ -27,22 +27,30 @@ int continuous()
 		x[i] = ((float)l[i] + (float)u[i])/2;
 	}
 	
+	
+	// Frequency Input is taken
 	for(i=0; i<nc; i++)
 	{
 		printf("Enter frequency for class %d-%d : ", l[i], u[i]);
 		scanf("%d", &f[i]);
 	}
 	printf("\n");
-	cf[0] = f[0];
 	
+	
+	// Cumulative Frequency
+	cf[0] = f[0];
 	for(i=0; i<nc; i++)
 	{
 		cf[i+1] = cf[i] + f[i+1];
 	}
+	
+	// Total Frequency
 	for(i=0; i<nc; i++)
 	{
 		sf +=f[i];
 	}
+	
+	
 	for(i=0; i<nc; i++)
 	{
 		for(j=0; j<3; j++)
