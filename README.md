@@ -1,1 +1,1 @@
-# Quartiles
+# Basic Statistics in C
